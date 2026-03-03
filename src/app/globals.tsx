@@ -1,4 +1,5 @@
-import "./globals.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import "./globals.css"
+
+export default function Globals() {
+  return null
+}
