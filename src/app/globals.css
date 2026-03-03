@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =====================================================
+ROOT SCROLL FIX (DO NOT REMOVE)
+===================================================== */
+
+html {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+LAYOUT SYSTEM
+===================================================== */
+
+.section-padding {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =====================================================
+   DESIGN SYSTEM — 2026 PORTFOLIO
+===================================================== */
+
+:root {
+
+  /* Core Colors */
+
+  --bg-primary: #07070a;
+  --bg-secondary: #0f0f14;
+  --bg-tertiary: #16161d;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+
+  --border-subtle: rgba(255,255,255,0.06);
+
+  /* Gradient System */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed,
+    #2563eb
+  );
+
+  --gradient-accent: linear-gradient(
+    135deg,
+    #06b6d4,
+    #3b82f6,
+    #6366f1
+  );
+
+  --gradient-glow: radial-gradient(
+    circle at center,
+    rgba(99,102,241,0.35),
+    transparent 70%
+  );
+
+  /* Shadows */
+
+  --shadow-soft:
+    0 10px 30px rgba(0,0,0,0.3);
+
+  --shadow-glow:
+    0 0 40px rgba(99,102,241,0.35);
+
+}
+
+/* =====================================================
+   BASE RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   TYPOGRAPHY SCALE
+===================================================== */
+
+h1{
+  font-size: clamp(3rem,6vw,5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2{
+  font-size: clamp(2.4rem,4vw,3rem);
+  font-weight: 700;
+}
+
+h3{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+p{
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* =====================================================
+   LAYOUT SYSTEM
+===================================================== */
+
+.section-padding{
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.container-custom{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =====================================================
+   MODERN GRID BACKGROUND
+===================================================== */
+
+.grid-bg{
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+
+}
+
+/* =====================================================
+   PREMIUM GLASS SYSTEM
+===================================================== */
+
+.glass{
+
+  background: rgba(255,255,255,0.03);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid var(--border-subtle);
+
+  border-radius: 16px;
+
+}
+
+.glass-card{
+
+  background: rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 20px;
+
+  transition: all .35s ease;
+
+}
+
+.glass-card:hover{
+
+  transform: translateY(-6px);
+
+  border-color: rgba(99,102,241,0.35);
+
+  box-shadow: var(--shadow-glow);
+
+}
+
+/* =====================================================
+   BUTTON SYSTEM
+===================================================== */
+
+.btn-primary{
+
+  background: var(--gradient-primary);
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  color: white;
+
+  transition: all .3s ease;
+
+}
+
+.btn-primary:hover{
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-glow);
+
+}
+
+/* =====================================================
+   ANIMATION UTILITIES
+===================================================== */
+
+.fade-up{
+  opacity:0;
+  transform: translateY(40px);
+}
+
+.fade-in{
+  opacity:0;
+}
+
+.scale-in{
+  opacity:0;
+  transform: scale(.9);
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #3b3b44;
+  border-radius: 20px;
+}
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection{
+  background:#6366f1;
+  color:white;
+}
